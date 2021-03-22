@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+p {
+    color: #fff;
+}
+
+.container {
+    background: hsl(212, 36%, 90%);
+    width: 900px;
+    height: 200vh;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    ". . . one"
+    "two two three ."
+    "two two four five"
+    ". . . ."
+    ". six seven seven"
+    "eight nine seven seven"
+    "ten . . ."
+;
+}
+
+.container > div {
+    background: hsl(212, 43%, 65%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .blok2,
+.container .blok7 {
+    background: hsl(208, 48%, 47%);
+}
+
+.blok1 {
+    grid-area: one;
+}
+
+.blok2 {
+    grid-area: two;
+}
+
+.blok3 {
+    grid-area: three;
+}
+
+.blok4 {
+    grid-area: four;
+}
+
+.blok5 {
+    grid-area: five;
+}
+
+.blok6 {
+    grid-area: six;
+}
+
+.blok7 {
+    grid-area: seven;
+}
+
+.blok8 {
+    grid-area: eight;
+}
+
+.blok9 {
+    grid-area: nine;
+}
+
+.blok10 {
+    grid-area: ten;
+}
