@@ -4,11 +4,18 @@ body {
     background-color: hsl(35, 40%, 91%);
     color: hsl(25, 22%, 56%);
     font-family: Avenir, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
     background-color: hsl(35, 40%, 95%);
     border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .item {
@@ -16,4 +23,32 @@ body {
     border: 1px solid hsl(35, 40%, 78%);
     border-radius: 4px;
     box-shadow: 2px 2px 4px hsl(35, 40%, 78%);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.item#aside {
+    min-width: 300px;
+    margin:0 15px 0 0;
+}
+
+.item#main {
+    width: auto;
+    margin: 0 0 0 15px;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .item#aside,
+    .item#main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .item#aside {
+        margin-bottom: 30px;
+    }
 }
